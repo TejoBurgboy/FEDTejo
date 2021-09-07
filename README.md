@@ -16,11 +16,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Auteur:
-Sanne 't Hooft (vervangen door jouw naam)
-
+Tejo van der Burg
+ 
 #### Je startniveau:
-hier je startniveau (kies uit zwart, rood óf blauw)
-
+Blauw
+ 
 #### Je focus:  responsive 
  
 </details>
