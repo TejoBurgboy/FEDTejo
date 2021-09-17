@@ -2,6 +2,11 @@
 *, *::after, *::before {
   box-sizing:border-box;  
 }
+*, html {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
 .root{
 
 }
@@ -21,13 +26,14 @@ body{
     justify-content: space-around;
     background-color: white;
     margin-bottom: 1em;
+    position:fixed;
   }
   h1{
     color:red;
     font-weight: bold;
   }
 
-  Nav,ul{
+  header>Nav>ul{
 display: flex;
 flex-direction: row;
 list-style-type: none;
@@ -42,33 +48,48 @@ main{
   flex-wrap:wrap;
   margin-bottom: 1em;
 }
+
   section{
     position: relative;
-    border: 1px solid black;
     margin: 2.8em;
+    padding:1em;
   }
+
+  section#firstsection{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding:0;
+    margin: 1em;
+  }
+
+  h2{
+    font-size: 1em;
+  }
+
   section>img{
     position: absolute;
-    right:1em;
+    right:0em;
 width: 30%;
 border-radius: 1ch ;
 top: .5em;
   }
-h2{
-  font-size: 1em;
+h3{
+  font-size: 0.8em;
   position: absolute;
-  right: 6em;
-  top: -.5em;
+  right: 8em;
+  top: 0em;
 }
-  h3{
+  h4{
     font-size: .5em;
     text-transform: uppercase;
     color: gray;
     position: absolute;
-  top: 9em;
+  top: 7em;
   }
 footer{
   margin-top: 5em;
+  margin-left: 1em;
 }
   footer>nav>ul{
     list-style-type: none;
