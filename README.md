@@ -35,7 +35,7 @@ Blauw
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-https://nos.nl/sport
+https://nos.nl/sport/voetbal
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 hier de naam van de pagina  
