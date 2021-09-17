@@ -57,7 +57,7 @@ hier de naam van de pagina
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="images/breakdownschets.png" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu): 
 <img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
@@ -78,6 +78,15 @@ hier de naam van de pagina
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+1.Ervoor zorgen dat de Header altijd zichtbaar is bovenin zonder dat het overlapt met de tekst op de main.
+<img src="probleem1" width="375px" alt="Header overlapt met main">
+code Header:
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    margin-bottom: 1em;
 
 
 ### Agenda voor meeting
