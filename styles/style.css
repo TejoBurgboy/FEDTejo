@@ -1,103 +1,175 @@
 /* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
-*, html {
+
+* {
 	padding: 0px;
 	margin: 0px;
 	box-sizing: border-box;
 }
 
-body{
-  background-color: white;
-      height: 100%;
-      text-size-adjust: 100%;
-      -webkit-tap-highlight-color: transparent;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizelegibility;
-      font-feature-settings: "liga", "kern";
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-  header{
+body {
+	background-color: white;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	font-feature-settings: "liga", "kern";
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
+.darkmode{
+	background-color: black;
+	color: white;
+}
+
+header {
     display: flex;
     justify-content: space-around;
+	align-items: center;
     background-color: white;
     margin-bottom: 1em;
-    border-bottom: 1px solid black ;
-  }
-  h1{
-    color:red;
-    font-weight: 800;
-  }
-header>h1{
-  position: absolute;
-  top:-.1em;
-  left:0;
+    border-bottom: 1px solid black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 5;
 }
-  header>Nav>ul{
-display: flex;
+
+.darkmode header{
+	background-color: black;
+	border-bottom: 1px solid white;
+}
+
+header>Nav>ul {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+}
+
+header>Nav>ul>li {
+	margin: .5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button{
+	height: 10%;
+	width: 10%;
+	background-color: white;
+	border: 0pc solid white;
+}
+
+button>img{
+	height: 100%;
+	width: 100%;
+}
+
+.darkmode button{
+	background-color: black;
+}
+
+a {
+color: black;
+text-decoration: none;
+}
+
+.darkmode a {
+	color: white;
+}
+
+.Noslogo{
+	color: silver;
+	font-weight: 800;
+	font-size: 2em;
+}
+
+#deovannos{
+	color: red;
+}
+
+svg{
+	margin-top: .8em;
+}
+
+.driepuntmenuknop{
+transform: rotate(90deg);
+}
+
+main {
+	margin:1em;
+	margin-top: 4em;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-bottom: 1em;
+}
+
+section {
+	border-bottom: .1px solid lightgray;
+	display: flex;
 flex-direction: row;
-list-style-type: none;
+padding: 0.3em;
+padding-top: .5em;
+padding-bottom:.5em ;
 
-  }
-  li{
-    margin :1em;
-  }
-main{
-  display: flex;
-  flex-direction:column;
-  flex-wrap:wrap;
-  margin-bottom: 1em;
-  
 }
 
-  section{
-    border-top: .25px solid gray;
-    position: relative;
-    margin: 2.8em;
-    padding:1em;
-  }
-
-  section#firstsection{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding:0;
-    margin: 1em;
-    border-top: 0px solid white;
-  }
-
-  h2{
-    font-size: 1em;
-  }
-
-  section>img{
-    position: absolute;
-    right:0em;
-width: 30%;
-border-radius: 1ch ;
-top: .5em;
-  }
-h3{
-  font-size: 0.8em;
-  position: absolute;
-  right: 8em;
-  top: 0em;
-  left:0;
+section#mainheader {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	padding: 0;
+	margin: 1.5em 1em 3em 1em;
+	border-bottom: 0px solid white;
+	
 }
-  h4{
-    font-size: .5em;
-    text-transform: uppercase;
-    color: gray;
-    position: absolute;
-  top: 7em;
-  left:0;
-  }
-footer{
-  margin-top: 5em;
-  margin-left: 1em;
+
+.sectiontekst{
+	padding-left: .5em;
 }
-  footer>nav>ul{
-    list-style-type: none;
-  }
+
+h2 {
+	font-size: 1em;
+}
+
+section>img {
+	height: 30%;
+	width: 30%;
+	border-radius: .5ch;
+}
+
+h3 {
+	font-size: .9em;
+width: 85%;
+padding: .2em;
+font-weight: 300;
+
+}
+
+h4 {
+	font-size: .5em;
+	text-transform: uppercase;
+	color: gray;
+	padding: .2em;
+
+}
+
+footer {
+	margin-top: 5em;
+	margin-left: 1em;
+}
+
+footer>nav>ul {
+	list-style-type: none;
+}
+
+footer>nav>ul>li {
+	font-weight: 300;
+	margin: 1em 0em 1em 0em;
+}
