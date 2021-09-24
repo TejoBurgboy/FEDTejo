@@ -19,8 +19,8 @@ function darkLightMode() {
 
 darkModeButton.addEventListener("click", darkLightMode);
 
-function hamburgerMenuNieuws(){
-	nieuwsPaginaMenu.classList.toggle("NieuwsPaginaMenuOpen");
+function hamburgerMenuNieuws() {
+    nieuwsPaginaMenu.classList.toggle("NieuwsPaginaMenuOpen");
 }
 
 knopNieuwsMenu.addEventListener("click", hamburgerMenuNieuws);

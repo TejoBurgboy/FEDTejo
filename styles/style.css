@@ -14,10 +14,6 @@
 
 body {
 	background-color: white;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizelegibility;
-	font-feature-settings: "liga", "kern";
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -83,27 +79,31 @@ a {
 	color: white;
 }
 
-.NieuwsPaginaMenu{
-	position:fixed;
-  top: 3.25em;
-  left: 5em;
-  background-color: white;
-  z-index: 5;
-  list-style-type: none;
-  padding: .5em;
-  transform:translatey(-120%);
-  transition:1s;
+.NieuwsPaginaMenu {
+	position: fixed;
+	top: 3.25em;
+	left: 4.5em;
+	background-color: white;
+	z-index: 5;
+	list-style-type: none;
+	padding: .5em;
+	transform: translatey(-120%);
+	transition: 1s;
 }
 
-.NieuwsPaginaMenu>li{
+.darkmode ul {
+	background-color: black;
+}
+
+.NieuwsPaginaMenu>li {
 	border-bottom: gray solid 1px;
+	margin: 0em .5em 0em .5em;
 	padding: .5em;
 }
 
-
-.NieuwsPaginaMenuOpen{
-  transform:translatey(0%);
-  transition:1s;
+.NieuwsPaginaMenuOpen {
+	transform: translatey(0%);
+	transition: 1s;
 }
 
 .Noslogo {
