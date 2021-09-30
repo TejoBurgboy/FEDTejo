@@ -20,6 +20,7 @@ body {
 .darkmode {
 	background-color: black;
 	color: white;
+	transition: 1s;
 }
 
 header {
@@ -58,7 +59,9 @@ button {
 	height: 10%;
 	width: 10%;
 	background-color: white;
-	border: 0pc solid white;
+	border: 1px solid black;
+	padding: .5em;
+	border-radius: 1em;
 }
 
 button>img {
@@ -68,6 +71,9 @@ button>img {
 
 .darkmode button {
 	background-color: black;
+	padding: .5em;
+	border-radius: 1em;
+	border: solid 1px white;
 }
 
 a {
@@ -78,6 +84,7 @@ a {
 .darkmode a {
 	color: white;
 }
+
 
 .NieuwsPaginaMenu {
 	position: fixed;
@@ -91,6 +98,11 @@ a {
 	transition: 1s;
 }
 
+.NieuwsPaginaMenuOpen{
+	transform: translatey(0%);
+	transition: 1s;
+}
+
 .darkmode ul {
 	background-color: black;
 }
@@ -101,10 +113,32 @@ a {
 	padding: .5em;
 }
 
-.NieuwsPaginaMenuOpen {
+.NieuwsPaginaMenu:hover{
+	cursor:pointer;
 	transform: translatey(0%);
 	transition: 1s;
 }
+
+li:active {
+	background-color: lightyellow;
+}
+
+button:hover{
+	cursor:pointer;
+}
+
+li:hover{
+	cursor:pointer;
+}
+
+svg:hover{
+	cursor:pointer;
+}
+
+a:hover{
+	cursor:pointer;
+}
+
 
 .Noslogo {
 	color: silver;
@@ -117,11 +151,31 @@ a {
 }
 
 svg {
-	margin-top: .8em;
+	margin-top: .2em;
 }
 
 .driepuntmenuknop {
 	transform: rotate(90deg);
+}
+
+a:active{
+	border: solid gray 1px;
+	background-color: lightyellow;
+}
+
+a.darkmode:active{
+	border: solid gray 1px;
+	background-color: darkgoldenrod;
+}
+
+li:active{
+	border: solid gray 1px;
+	background-color: lightyellow;
+}
+
+li.darkmode:active{
+	border: solid gray 1px;
+	background-color: darkgoldenrod;
 }
 
 main {
@@ -142,13 +196,20 @@ section {
 	padding-bottom: .5em;
 }
 
-section#mainheader {
+section:hover{
+	cursor:pointer;
+}
+
+section:first-of-type {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
 	padding: 0;
 	margin: 1.5em 1em 3em 1em;
 	border-bottom: 0px solid white;
+}
+section:first-of-type{
+	cursor:auto;
 }
 
 .sectiontekst {

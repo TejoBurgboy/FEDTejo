@@ -19,8 +19,14 @@ function darkLightMode() {
 
 darkModeButton.addEventListener("click", darkLightMode);
 
-function hamburgerMenuNieuws() {
-    nieuwsPaginaMenu.classList.toggle("NieuwsPaginaMenuOpen");
+function hamburgerMenuNieuwsOver() {
+    nieuwsPaginaMenu.classList.add("NieuwsPaginaMenuOpen");
 }
 
-knopNieuwsMenu.addEventListener("click", hamburgerMenuNieuws);
+knopNieuwsMenu.addEventListener("mouseover", hamburgerMenuNieuwsOver);
+
+function hamburgerMenuNieuwsOut() {
+    nieuwsPaginaMenu.classList.remove("NieuwsPaginaMenuOpen");
+}
+
+knopNieuwsMenu.addEventListener("mouseout", hamburgerMenuNieuwsOut);
