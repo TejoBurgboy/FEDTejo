@@ -7,6 +7,7 @@ var knopSportMenu = document.querySelector(".SportPaginaKnop");
 var sportPaginaMenu = document.querySelector(".SportPaginaMenu");
 var getal = 0;
 
+/* Darklight Mode.*/
 function darkLightMode() {
     bodyElement.classList.toggle("darkmode");
 
@@ -21,6 +22,7 @@ function darkLightMode() {
 
 darkModeButton.addEventListener("click", darkLightMode);
 
+/* Hamburger Menu Nieuws.*/
 function hamburgerMenuNieuwsOver() {
     nieuwsPaginaMenu.classList.add("NieuwsPaginaMenuOpen");
 }
@@ -33,6 +35,7 @@ function hamburgerMenuNieuwsOut() {
 
 knopNieuwsMenu.addEventListener("mouseout", hamburgerMenuNieuwsOut);
 
+/* Hamburger Menu Sport.*/
 function hamburgerMenuSportOver() {
     sportPaginaMenu.classList.add("SportPaginaMenuOpen");
 }
