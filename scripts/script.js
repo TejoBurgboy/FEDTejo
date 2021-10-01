@@ -3,6 +3,8 @@ var darkModeButton = document.querySelector(".darkmodebutton");
 var bodyElement = document.querySelector("body");
 var knopNieuwsMenu = document.querySelector(".NieuwsPaginaKnop");
 var nieuwsPaginaMenu = document.querySelector(".NieuwsPaginaMenu");
+var knopSportMenu = document.querySelector(".SportPaginaKnop");
+var sportPaginaMenu = document.querySelector(".SportPaginaMenu");
 var getal = 0;
 
 function darkLightMode() {
@@ -30,3 +32,15 @@ function hamburgerMenuNieuwsOut() {
 }
 
 knopNieuwsMenu.addEventListener("mouseout", hamburgerMenuNieuwsOut);
+
+function hamburgerMenuSportOver() {
+    sportPaginaMenu.classList.add("SportPaginaMenuOpen");
+}
+
+knopSportMenu.addEventListener("mouseover", hamburgerMenuSportOver);
+
+function hamburgerMenuSportOut() {
+    sportPaginaMenu.classList.remove("SportPaginaMenuOpen");
+}
+
+knopSportMenu.addEventListener("mouseout", hamburgerMenuSportOut);
