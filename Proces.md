@@ -21,7 +21,7 @@ Tejo van der Byrg
 #### Je startniveau:
 Blauw
 
-#### Je focus:  responsive 
+#### Je focus:  surface
  
 </details>
 
