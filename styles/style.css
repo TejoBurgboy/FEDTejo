@@ -11,27 +11,49 @@
 	margin: 0px;
 }
 
+:root{
+	--pagina-kleur-light:white;
+	--tekst-kleur-light:black;
+	--pagina-kleur-dark:black;
+	--tekst-kleur-dark:white;
+	--Haloween-kleur:orange;
+	--focus-tekst-kleur:red;
+	--tweede-tekst-kleur:red;
+	--border-focus:gray;
+	--border-element-light:black;
+	--border-element-dark:white;
+
+
+}
 
 /* Alle Css voor de Body */
 
 body {
-	background-color: white;
+	background-color:var(--pagina-kleur-light);
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	transition: 1s;
 }
 
 .darkmode {
-	background-color: black;
-	color: white;
+	background-color:var(--pagina-kleur-dark);
+	color:var(--tekst-kleur-light);
+}
+
+.haloween {
+	color:var(--Haloween-kleur);
+}
+
+.darkmodeHaloween{
+	background-color:var(--pagina-kleur-dark);
 }
 
 
 /* Alle Css voor de Header */
 
 header {
-	background-color: white;
+	background-color:var(--pagina-kleur-light);
 	margin-bottom: 1em;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid var(--border-element-light);
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -43,8 +65,18 @@ header {
 }
 
 .darkmode header {
-	background-color: black;
-	border-bottom: 1px solid white;
+	background-color:var(--pagina-kleur-dark);
+	border-bottom: 1px solid var(--border-element-dark);
+
+}
+
+.haloween header {
+	color: orange;
+}
+
+.darkmodeHaloween header{
+	background-color:var(--pagina-kleur-dark);
+	border-bottom: 1px solid var(--border-element-dark);
 }
 
 
@@ -54,6 +86,18 @@ header>Nav>ul {
 	display: flex;
 	flex-direction: row;
 	list-style-type: none;
+}
+
+.darkmode ul {
+	background-color:var(--pagina-kleur-dark);
+}
+
+.haloween ul {
+	color: orange;
+}
+
+.darkmodeHaloween ul{
+	background-color:var(--pagina-kleur-dark);
 }
 
 header>Nav>ul>li {
@@ -68,21 +112,26 @@ li:hover {
 }
 
 li:focus {
-	border: solid gray 1px;
 	background-color: lightyellow;
 	outline: none;
-	border: 1px solid gray;
+	border: 1px solid var(--border-focus);
 }
 
 li.darkmode:focus {
-	border: solid gray 1px;
 	background-color: darkgoldenrod;
 	outline: none;
 	border: 1px solid gray;
 }
 
+li.darkmodeHaloween:focus {
+	border: 1px solid gray;
+	background-color: darkorange;
+	outline: none;
+}
+
+
 li:nth-of-type(3) {
-	color: red;
+	color: var(--tweede-tekst-kleur);
 }
 
 .Noslogo {
@@ -92,7 +141,7 @@ li:nth-of-type(3) {
 }
 
 .deovannos {
-	color: red;
+	color:var(--tweede-tekst-kleur);
 }
 
 h2 {
@@ -100,11 +149,11 @@ h2 {
 }
 
 h2:active {
-	color: red;
+	color:var(--tweede-tekst-kleur);
 }
 
 h2:hover {
-	color: red;
+	color:var(--focus-tekst-kleur);
 	cursor: pointer;
 }
 
@@ -119,7 +168,7 @@ h2:hover {
 .NieuwsPaginaMenu {
 	position: fixed;
 	top: 3.25em;
-	left: 4.5em;
+	left: 15%;
 	background-color: white;
 	z-index: 5;
 	list-style-type: none;
@@ -131,10 +180,6 @@ h2:hover {
 .NieuwsPaginaMenuOpen {
 	transform: translatey(0%);
 	transition: 1s;
-}
-
-.darkmode ul {
-	background-color: black;
 }
 
 .NieuwsPaginaMenu>li {
@@ -152,8 +197,8 @@ h2:hover {
 .SportPaginaMenu {
 	position: fixed;
 	top: 3.25em;
-	right: 7em;
-	background-color: white;
+	left: 40%;
+	background-color:var(--pagina-kleur-light);
 	z-index: 5;
 	list-style-type: none;
 	padding: .5em;
@@ -167,7 +212,7 @@ h2:hover {
 }
 
 .SportPaginaMenu>li {
-	border-bottom: gray solid 1px;
+	border-bottom: 1px solid gray;
 	margin: 0em .5em 0em .5em;
 	padding: .5em;
 }
@@ -177,43 +222,58 @@ h2:hover {
 }
 
 a {
-	color: black;
+	color: var(--tekst-kleur-light);
 	text-decoration: none;
 }
 
 a:focus {
-	border: solid gray 1px;
 	background-color: lightyellow;
 	outline: none;
-	border: 1px solid gray;
+	border: 1px solid var(--border-focus);
 }
 
 a:hover {
 	cursor: pointer;
-	color: red;
+	color: var(--focus-tekst-kleur);
 }
 
 .darkmode a {
-	color: white;
+	color:var(tekst-kleur-dark);
 }
 
+.haloween a {
+	color: var(--Haloween-kleur);
+}
+
+.darkmodeHaloween a{
+	background-color: var(--pagina-kleur-dark);
+}
+
+
 a.darkmode:focus {
-	border: solid gray 1px;
 	background-color: darkgoldenrod;
 	outline: none;
-	border: 1px solid gray;
+	border: 1px solid var(--border-focus);
 }
 
 li:active {
 	background-color: lightyellow;
 }
 
+@media (max-width: 21em){
+	li {
+		font-size: .8em;
+	}
+}
 
 /* Alle Css voor de svg,s*/
 
+header>a{
+	width: 25%;
+}
+
 svg {
 	margin-top: .2em;
-	width: 20%;
 	margin-right: 1em;
 }
 
@@ -226,13 +286,14 @@ svg:hover {
 }
 
 
+
 /* Alle Css voor de Dark/LightmodeButton*/
 
 button {
-	height: 25%;
-	width: 25%;
-	background-color: white;
-	border: 1px solid black;
+	height: auto;
+	width: 35%;
+	background-color: var(--pagina-kleur-light);
+	border: 1px solid var(--border-element-light);
 	padding: .5em;
 	border-radius: 1em;
 }
@@ -243,10 +304,23 @@ button>img {
 }
 
 .darkmode button {
-	background-color: black;
+	background-color:var(--pagina-kleur-dark);
 	padding: .5em;
 	border-radius: 1em;
-	border: solid 1px white;
+	border: solid 1px var(--border-element-dark);
+}
+
+.haloween button {
+	background-color:#fed8b1;
+	;
+	border: solid 1px darkorange;
+}
+
+.darkmodeHaloween button{
+	background-color: darkorange;
+	padding: .5em;
+	border-radius: 1em;
+	border: solid 1px #fed8b1;
 }
 
 button:hover {
@@ -254,10 +328,9 @@ button:hover {
 }
 
 button:focus {
-	border: 3px solid gray;
+	border: 3px solid var(--border-focus);
 	outline: none;
 }
-
 
 /* Alle Css voor de Main*/
 
@@ -286,7 +359,7 @@ h3 {
 }
 
 h3:hover {
-	color: red;
+	color: var(--focus-tekst-kleur);
 }
 
 h4 {
@@ -341,9 +414,15 @@ section>img {
 }
 
 section>a>img {
-	height: 55%;
-	width: 55%;
+	height: auto;
+	width: 30%;
 	border-radius: .5ch;
+}
+
+@media (max-width: 20em){
+	h3 {
+		font-size: .7em;
+	}
 }
 
 p {
@@ -352,6 +431,14 @@ p {
 
 video {
 	width: 100%;
+}
+
+@media (max-width: 20em){
+	section>a>img {
+		height: auto;
+		width: 30%;
+		border-radius: .5ch;
+	}
 }
 
 
