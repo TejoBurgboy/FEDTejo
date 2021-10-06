@@ -74,7 +74,7 @@ Oppermachtig Ajax toont in Champions League genade voor Besiktas: 2-0.
 
 
 1.Ervoor zorgen dat de Header altijd zichtbaar is bovenin zonder dat het overlapt met de tekst op de main.
-<img src="images/probleem1" width="375px" alt="Header overlapt met main">
+<img src="images/probleem1.png" width="375px" alt="Header overlapt met main">
 code Header:
     position: fixed;
     display: flex;
