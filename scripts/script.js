@@ -1,7 +1,7 @@
 // JavaScript Document
 var haloweenDate = ('10-31')
 var today = new Date();
-var date =(today.getMonth()+1)+'-'+today.getDate();
+var date = (today.getMonth() + 1) + '-' + today.getDate();
 var darkModeButton = document.querySelector(".darkmodebutton");
 var bodyElement = document.querySelector("body");
 var knopNieuwsMenu = document.querySelector(".NieuwsPaginaKnop");
@@ -12,10 +12,10 @@ var getal = 0;
 
 /* Haloween Mode.*/
 
-function haloween(){
-if (haloweenDate == date) {
-    bodyElement.classList.add("haloween");
-};
+function haloween() {
+    if (haloweenDate == date) {
+        bodyElement.classList.add("haloween");
+    };
 };
 
 haloween();
@@ -40,6 +40,7 @@ function darkLightModeHaloween() {
     } else {
         document.getElementById("lightdarkmodeimage").src = "images/lightmode.png";
         getal = 1;
+        /* lightmode.png is zelf gemaakt*/
     };
 };
 

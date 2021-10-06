@@ -11,47 +11,48 @@
 	margin: 0px;
 }
 
-:root{
-	--pagina-kleur-light:white;
-	--tekst-kleur-light:black;
-	--pagina-kleur-dark:black;
-	--tekst-kleur-dark:white;
-	--Haloween-kleur:orange;
-	--focus-tekst-kleur:red;
-	--tweede-tekst-kleur:red;
-	--border-focus:gray;
-	--border-element-light:black;
-	--border-element-dark:white;
-
-
+:root {
+	--pagina-kleur-light: white;
+	--tekst-kleur-light: black;
+	--pagina-kleur-dark: black;
+	--tekst-kleur-dark: white;
+	--Haloween-kleur: orange;
+	--hoover-tekst-kleur: red;
+	--active-tekst-kleur: red;
+	--tweede-tekst-kleur: red;
+	--border-focus: black;
+	--border-element-light: black;
+	--border-element-dark: white;
+	--focus-achtergrond-kleur: lightyellow;
 }
+
 
 /* Alle Css voor de Body */
 
 body {
-	background-color:var(--pagina-kleur-light);
+	background-color: var(--pagina-kleur-light);
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	transition: 1s;
 }
 
 .darkmode {
-	background-color:var(--pagina-kleur-dark);
-	color:var(--tekst-kleur-light);
+	background-color: var(--pagina-kleur-dark);
+	color: var(--tekst-kleur-dark);
 }
 
 .haloween {
-	color:var(--Haloween-kleur);
+	color: var(--Haloween-kleur);
 }
 
-.darkmodeHaloween{
-	background-color:var(--pagina-kleur-dark);
+.darkmodeHaloween {
+	background-color: var(--pagina-kleur-dark);
 }
 
 
 /* Alle Css voor de Header */
 
 header {
-	background-color:var(--pagina-kleur-light);
+	background-color: var(--pagina-kleur-light);
 	margin-bottom: 1em;
 	border-bottom: 1px solid var(--border-element-light);
 	position: fixed;
@@ -65,22 +66,21 @@ header {
 }
 
 .darkmode header {
-	background-color:var(--pagina-kleur-dark);
+	background-color: var(--pagina-kleur-dark);
 	border-bottom: 1px solid var(--border-element-dark);
-
 }
 
 .haloween header {
-	color: orange;
+	color: var(--Haloween-kleur);
 }
 
-.darkmodeHaloween header{
-	background-color:var(--pagina-kleur-dark);
+.darkmodeHaloween header {
+	background-color: var(--pagina-kleur-dark);
 	border-bottom: 1px solid var(--border-element-dark);
 }
 
 
-/* Alle Css voor de Navigatie*/
+/* Alle Css voor de Navigatie/ul*/
 
 header>Nav>ul {
 	display: flex;
@@ -89,16 +89,19 @@ header>Nav>ul {
 }
 
 .darkmode ul {
-	background-color:var(--pagina-kleur-dark);
+	background-color: var(--pagina-kleur-dark);
 }
 
 .haloween ul {
-	color: orange;
+	color: var(--Haloween-kleur);
 }
 
-.darkmodeHaloween ul{
-	background-color:var(--pagina-kleur-dark);
+.darkmodeHaloween ul {
+	background-color: var(--pagina-kleur-dark);
 }
+
+
+/* Alle Css voor de List items*/
 
 header>Nav>ul>li {
 	margin: .5em;
@@ -109,30 +112,31 @@ header>Nav>ul>li {
 
 li:hover {
 	cursor: pointer;
+	color: var(--hoover-tekst-kleur);
+}
+
+li:active {
+	color: var(--active-tekst-kleur);
 }
 
 li:focus {
-	background-color: lightyellow;
+	background-color: var(--focus-achtergrond-kleur);
 	outline: none;
 	border: 1px solid var(--border-focus);
 }
 
-li.darkmode:focus {
-	background-color: darkgoldenrod;
-	outline: none;
-	border: 1px solid gray;
-}
-
-li.darkmodeHaloween:focus {
-	border: 1px solid gray;
-	background-color: darkorange;
-	outline: none;
-}
-
-
-li:nth-of-type(3) {
+li:nth-of-type(2n+1) {
 	color: var(--tweede-tekst-kleur);
 }
+
+@media (max-width: 21em) {
+	li {
+		font-size: .8em;
+	}
+}
+
+
+/* Alle Css voor het nos logo*/
 
 .Noslogo {
 	color: silver;
@@ -141,21 +145,33 @@ li:nth-of-type(3) {
 }
 
 .deovannos {
-	color:var(--tweede-tekst-kleur);
+	color: var(--tweede-tekst-kleur);
 }
+
+
+/* Alle Css voor de H2*/
 
 h2 {
 	font-size: 1em;
 }
 
 h2:active {
-	color:var(--tweede-tekst-kleur);
+	color: var(--active-tekst-kleur);
 }
 
 h2:hover {
-	color:var(--focus-tekst-kleur);
+	color: var(--hoover-tekst-kleur);
 	cursor: pointer;
 }
+
+h2:focus {
+	background-color: var(--focus-achtergrond-kleur);
+	outline: none;
+	border: 1px solid var(--border-focus);
+}
+
+
+/* Alle Css voor de svg,s in de Ul*/
 
 .Pijltjenabenedennavigatie {
 	width: 10%;
@@ -198,7 +214,7 @@ h2:hover {
 	position: fixed;
 	top: 3.25em;
 	left: 40%;
-	background-color:var(--pagina-kleur-light);
+	background-color: var(--pagina-kleur-light);
 	z-index: 5;
 	list-style-type: none;
 	padding: .5em;
@@ -221,54 +237,45 @@ h2:hover {
 	cursor: pointer;
 }
 
+
+/* Alle Css voor de A,tjes*/
+
 a {
 	color: var(--tekst-kleur-light);
 	text-decoration: none;
 }
 
 a:focus {
-	background-color: lightyellow;
+	background-color: var(--focus-achtergrond-kleur);
 	outline: none;
 	border: 1px solid var(--border-focus);
 }
 
 a:hover {
 	cursor: pointer;
-	color: var(--focus-tekst-kleur);
+	color: var(--hoover-tekst-kleur);
+}
+
+a:active {
+	color: var(--active-tekst-kleur);
 }
 
 .darkmode a {
-	color:var(tekst-kleur-dark);
+	color: var(--tekst-kleur-dark);
 }
 
 .haloween a {
 	color: var(--Haloween-kleur);
 }
 
-.darkmodeHaloween a{
+.darkmodeHaloween a {
 	background-color: var(--pagina-kleur-dark);
 }
 
 
-a.darkmode:focus {
-	background-color: darkgoldenrod;
-	outline: none;
-	border: 1px solid var(--border-focus);
-}
-
-li:active {
-	background-color: lightyellow;
-}
-
-@media (max-width: 21em){
-	li {
-		font-size: .8em;
-	}
-}
-
 /* Alle Css voor de svg,s*/
 
-header>a{
+header>a {
 	width: 25%;
 }
 
@@ -284,7 +291,6 @@ svg {
 svg:hover {
 	cursor: pointer;
 }
-
 
 
 /* Alle Css voor de Dark/LightmodeButton*/
@@ -304,19 +310,19 @@ button>img {
 }
 
 .darkmode button {
-	background-color:var(--pagina-kleur-dark);
+	background-color: var(--pagina-kleur-dark);
 	padding: .5em;
 	border-radius: 1em;
 	border: solid 1px var(--border-element-dark);
 }
 
 .haloween button {
-	background-color:#fed8b1;
+	background-color: #fed8b1;
 	;
 	border: solid 1px darkorange;
 }
 
-.darkmodeHaloween button{
+.darkmodeHaloween button {
 	background-color: darkorange;
 	padding: .5em;
 	border-radius: 1em;
@@ -327,10 +333,15 @@ button:hover {
 	cursor: pointer;
 }
 
+button:hover {
+	background-color: red;
+}
+
 button:focus {
 	border: 3px solid var(--border-focus);
 	outline: none;
 }
+
 
 /* Alle Css voor de Main*/
 
@@ -356,10 +367,31 @@ h3 {
 	width: 85%;
 	padding: .2em;
 	font-weight: 300;
+	margin-top: 1em;
+}
+
+.sectiontekst h3 {
+	margin-top: 0;
 }
 
 h3:hover {
 	color: var(--focus-tekst-kleur);
+}
+
+h3:active {
+	color: var(--active-tekst-kleur);
+}
+
+h3:focus {
+	background-color: var(--focus-achtergrond-kleur);
+	outline: none;
+	border: 1px solid var(--border-focus);
+}
+
+@media (max-width: 20em) {
+	h3 {
+		font-size: .7em;
+	}
 }
 
 h4 {
@@ -367,6 +399,11 @@ h4 {
 	text-transform: uppercase;
 	color: gray;
 	padding: .2em;
+	margin-bottom: 2em;
+}
+
+.sectiontekst h4 {
+	margin-bottom: 0;
 }
 
 
@@ -407,6 +444,9 @@ section:first-of-type {
 	padding-left: .5em;
 }
 
+
+/* Alle Css voor de image,s in de sections*/
+
 section>img {
 	width: 30%;
 	height: 30%;
@@ -419,26 +459,26 @@ section>a>img {
 	border-radius: .5ch;
 }
 
-@media (max-width: 20em){
-	h3 {
-		font-size: .7em;
-	}
-}
-
-p {
-	margin: 1em 0 1em 0;
-}
-
-video {
-	width: 100%;
-}
-
-@media (max-width: 20em){
+@media (max-width: 20em) {
 	section>a>img {
 		height: auto;
 		width: 30%;
 		border-radius: .5ch;
 	}
+}
+
+
+/* Alle Css voor de Paragraven*/
+
+p {
+	margin: 1em 0 1em 0;
+}
+
+
+/* Alle Css voor de Video*/
+
+video {
+	width: 100%;
 }
 
 
