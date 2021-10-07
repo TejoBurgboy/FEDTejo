@@ -20,10 +20,10 @@
 	--hoover-tekst-kleur: red;
 	--active-tekst-kleur: red;
 	--tweede-tekst-kleur: red;
-	--border-focus: black;
+	--border-focus: gray;
 	--border-element-light: black;
 	--border-element-dark: white;
-	--focus-achtergrond-kleur: lightyellow;
+	--focus-achtergrond-kleur: yellowgreen;
 }
 
 
@@ -104,7 +104,7 @@ header>Nav>ul {
 /* Alle Css voor de List items*/
 
 header>Nav>ul>li {
-	margin: .5em;
+	margin: .3em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -123,10 +123,6 @@ li:focus {
 	background-color: var(--focus-achtergrond-kleur);
 	outline: none;
 	border: 1px solid var(--border-focus);
-}
-
-li:nth-of-type(2n+1) {
-	color: var(--tweede-tekst-kleur);
 }
 
 @media (max-width: 21em) {
@@ -149,32 +145,55 @@ li:nth-of-type(2n+1) {
 }
 
 
-/* Alle Css voor de H2*/
+/* Alle Css voor de Hamburger menu button*/
 
-h2 {
-	font-size: 1em;
+li>button {
+	border: none;
+	display: flex;
+	flex-direction: row;
+	background-color: var(--pagina-kleur-light);
 }
 
-h2:active {
+.darkmode li>button {
+	background-color: var(--pagina-kleur-dark);
+	color: var(--tekst-kleur-dark);
+	border: var(--border-element-light)
+}
+
+li>button:active {
 	color: var(--active-tekst-kleur);
 }
 
-h2:hover {
+li>button:hover {
 	color: var(--hoover-tekst-kleur);
+}
+
+li>button:focus {
+	outline: none;
+	border: 3px solid var(--border-focus);
+	background-color: var(--focus-achtergrond-kleur);
+}
+
+button:hover {
 	cursor: pointer;
 }
 
-h2:focus {
-	background-color: var(--focus-achtergrond-kleur);
-	outline: none;
-	border: 1px solid var(--border-focus);
+button {
+	font-size: 1em;
 }
+
+button.SportPaginaKnop {
+	color: red;
+}
+
+
+/* Alle Css voor de h2*/
 
 
 /* Alle Css voor de svg,s in de Ul*/
 
 .Pijltjenabenedennavigatie {
-	width: 10%;
+	width: 10px;
 	color: red;
 }
 
@@ -237,6 +256,15 @@ h2:focus {
 	cursor: pointer;
 }
 
+@media (max-width: 21em) {
+	.SportPaginaMenu {
+		left: 41%;
+	}
+	.NieuwsPaginaMenu {
+		left: 18%
+	}
+}
+
 
 /* Alle Css voor de A,tjes*/
 
@@ -245,10 +273,14 @@ a {
 	text-decoration: none;
 }
 
+li>a {
+	font-size: .8em;
+}
+
 a:focus {
-	background-color: var(--focus-achtergrond-kleur);
 	outline: none;
 	border: 1px solid var(--border-focus);
+	background-color: var(--focus-achtergrond-kleur);
 }
 
 a:hover {
@@ -270,6 +302,15 @@ a:active {
 
 .darkmodeHaloween a {
 	background-color: var(--pagina-kleur-dark);
+}
+
+@media (max-width: 21em) {
+	a>svg {
+		width: 70%;
+	}
+	a {
+		font-size: 1em;
+	}
 }
 
 
@@ -295,9 +336,9 @@ svg:hover {
 
 /* Alle Css voor de Dark/LightmodeButton*/
 
-button {
+button.darkmodebutton {
 	height: auto;
-	width: 35%;
+	width: 20%;
 	background-color: var(--pagina-kleur-light);
 	border: 1px solid var(--border-element-light);
 	padding: .5em;
@@ -311,9 +352,8 @@ button>img {
 
 .darkmode button {
 	background-color: var(--pagina-kleur-dark);
-	padding: .5em;
-	border-radius: 1em;
 	border: solid 1px var(--border-element-dark);
+	color: var(--tekst-kleur-dark);
 }
 
 .haloween button {
@@ -329,17 +369,18 @@ button>img {
 	border: solid 1px #fed8b1;
 }
 
-button:hover {
+.darkmodebutton button:hover {
 	cursor: pointer;
 }
 
-button:hover {
+.darkmodebutton button:hover {
 	background-color: red;
 }
 
 button:focus {
-	border: 3px solid var(--border-focus);
 	outline: none;
+	border: 3px solid var(--border-focus);
+	background-color: var(--focus-achtergrond-kleur);
 }
 
 
@@ -360,6 +401,10 @@ img {
 
 h1 {
 	font-size: 1.6em;
+}
+
+h2 {
+	font-size: 1.2em;
 }
 
 h3 {
@@ -397,7 +442,7 @@ h3:focus {
 h4 {
 	font-size: .5em;
 	text-transform: uppercase;
-	color: gray;
+	color: silver;
 	padding: .2em;
 	margin-bottom: 2em;
 }

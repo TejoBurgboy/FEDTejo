@@ -242,5 +242,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 1. https://stackoverflow.com/questions/4697100/accessibility-recommended-alt-text-convention-for-svg-and-mathml (Gebruikt voor de Titels bij de SVG)
 2. https://stackoverflow.com/questions/8230748/how-to-add-loader-image-to-html5-video (gebruikt voor de laad animatie bij de video)
 3. https://tecadmin.net/get-current-date-time-javascript/ (gebruikt voor de datum in javascript)
+4. https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event (Focusin)
 
 </details>

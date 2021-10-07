@@ -8,8 +8,8 @@ var knopNieuwsMenu = document.querySelector(".NieuwsPaginaKnop");
 var nieuwsPaginaMenu = document.querySelector(".NieuwsPaginaMenu");
 var knopSportMenu = document.querySelector(".SportPaginaKnop");
 var sportPaginaMenu = document.querySelector(".SportPaginaMenu");
+var svg3puntjes = document.querySelector(".driepuntmenu")
 var getal = 0;
-
 /* Haloween Mode.*/
 
 function haloween() {
@@ -33,6 +33,8 @@ function haloweenorNot() {
 
 function darkLightModeHaloween() {
     bodyElement.classList.toggle("darkmodeHaloween");
+    sportPaginaMenu.classList.remove("SportPaginaMenuOpen");
+    nieuwsPaginaMenu.classList.remove("NieuwsPaginaMenuOpen");
 
     if (getal == 1) {
         document.getElementById("lightdarkmodeimage").src = "images/darkmode.png";
@@ -46,6 +48,8 @@ function darkLightModeHaloween() {
 
 function normalDarkLightmode() {
     bodyElement.classList.toggle("darkmode");
+    sportPaginaMenu.classList.remove("SportPaginaMenuOpen");
+    nieuwsPaginaMenu.classList.remove("NieuwsPaginaMenuOpen");
 
     if (getal == 1) {
         document.getElementById("lightdarkmodeimage").src = "images/darkmode.png";
@@ -61,27 +65,31 @@ darkModeButton.addEventListener("click", haloweenorNot);
 /* Hamburger Menu Nieuws.*/
 function hamburgerMenuNieuwsOver() {
     nieuwsPaginaMenu.classList.add("NieuwsPaginaMenuOpen");
+    sportPaginaMenu.classList.remove("SportPaginaMenuOpen");
 }
 
-knopNieuwsMenu.addEventListener("mouseover", hamburgerMenuNieuwsOver);
+knopNieuwsMenu.addEventListener(("mouseover", "click"), hamburgerMenuNieuwsOver);
 
 function hamburgerMenuNieuwsOut() {
     nieuwsPaginaMenu.classList.remove("NieuwsPaginaMenuOpen");
 }
 
 knopNieuwsMenu.addEventListener("mouseout", hamburgerMenuNieuwsOut);
+knopSportMenu.addEventListener("focusin", hamburgerMenuNieuwsOut);
 
 /* Hamburger Menu Sport.*/
 function hamburgerMenuSportOver() {
     sportPaginaMenu.classList.add("SportPaginaMenuOpen");
+    nieuwsPaginaMenu.classList.remove("NieuwsPaginaMenuOpen");
 }
 
-knopSportMenu.addEventListener("mouseover", hamburgerMenuSportOver);
+knopSportMenu.addEventListener(("mouseover", "click"), hamburgerMenuSportOver);
 
 function hamburgerMenuSportOut() {
     sportPaginaMenu.classList.remove("SportPaginaMenuOpen");
 }
 
+svg3puntjes.addEventListener("focusin", hamburgerMenuSportOut);
 knopSportMenu.addEventListener("mouseout", hamburgerMenuSportOut);
 
 console.log(haloweenDate);
